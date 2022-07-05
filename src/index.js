@@ -6,13 +6,20 @@ import './index.scss';
 import 'macro-css';
 
 import App from './App';
+import Home from './pages/Home';
+import Favorites from './pages/Favorites';
+import Orders from './pages/Orders';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App />}></Route>
+        <Route path="/" element={<App />}>
+          <Route index element={<Home />}></Route>
+          <Route path="favorites" element={<Favorites />}></Route>
+          <Route path="orders" element={<Orders />}></Route>
+        </Route>
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
