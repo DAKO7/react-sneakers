@@ -39,7 +39,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
       <div className={styles.drawer}>
         <h2 className="d-flex justify-between mb-30">
           Shopping bag
-          <img onClick={onClose} className="cu-p" src="/img/btn-remove.svg" alt="Close" />
+          <img onClick={onClose} className="cu-p" src="img/btn-remove.svg" alt="Close" />
         </h2>
 
         {items.length > 0 ? (
@@ -58,7 +58,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                   <img
                     onClick={() => onRemove(obj.id)}
                     className="removeBtn"
-                    src="/img/btn-remove.svg"
+                    src="img/btn-remove.svg"
                     alt="Remove button"
                   />
                 </div>
@@ -78,7 +78,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                 </li>
               </ul>
               <button disabled={isLoading} onClick={onClickOrder} className="greenButton">
-                Checkout <img src="/img/arrow.svg" alt="Arrow" />
+                Checkout <img src="img/arrow.svg" alt="Arrow" />
               </button>
             </div>
           </div>
@@ -91,7 +91,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
                 ? `Your order #${orderId} will be handed over to the courier soon`
                 : 'Add at least one pair of sneakers, to make an order'
             }
-            image={isOrderComplete ? '/img/complete-order.jpg' : '/img/empty-cart.jpg'}
+            image={isOrderComplete ? 'img/complete-order.jpg' : 'img/empty-cart.jpg'}
           />
         )}
       </div>
