@@ -30,7 +30,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
         await delay(1000);
       }
     } catch (error) {
-      alert('Ошибка при создании заказа :(');
+      alert('Error creating order :(');
     }
     setIsLoading(false);
   };
@@ -41,6 +41,7 @@ function Drawer({ onClose, onRemove, items = [], opened }) {
           Shopping bag
           <img onClick={onClose} className="cu-p" src="/img/btn-remove.svg" alt="Close" />
         </h2>
+
         {items.length > 0 ? (
           <div className="d-flex flex-column flex">
             <div className="items flex">
